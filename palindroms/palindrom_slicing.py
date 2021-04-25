@@ -3,9 +3,11 @@ import re
 
 def is_palindrom(arg):
     """ function check if provided string or integer is a palindrom using slicing"""
+    #regex to filter separators when multi text is passed
     separator = re.compile(r"[,'\s.\"?!]+")
     if isinstance(arg, str) or isinstance(arg, int):
         pal = str(arg).lower()
+        # filtering all text separators
         pal = separator.sub("", pal)
         result = False
         if pal == pal[len(pal)::-1]:
