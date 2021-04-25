@@ -3,7 +3,7 @@ import re
 
 def is_palindrom(arg):
     """ function check if provided string or integer is a palindrom using slicing"""
-    separator = re.compile(r"[,'\s.\"?]+")
+    separator = re.compile(r"[,'\s.\"?!]+")
     if isinstance(arg, str) or isinstance(arg, int):
         pal = str(arg).lower()
         pal = separator.sub("", pal)
