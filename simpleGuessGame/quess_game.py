@@ -8,7 +8,7 @@ print("Guess the number game, please type a number from 1 to 100, you have 5 att
 # number of attempts player have
 attempt = 5
 
-while attempt > 0:
+while attempt:
     try:
         print(f"attempts left: {attempt}")
         guess = int(input("Please select a number between 1 and 100:\n"))
