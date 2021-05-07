@@ -1,17 +1,20 @@
 import random as rand
 
 # Randomize a number from 1 to 100
-secret_number = rand.randint(1, 100)
+lowest_Number = 1
+highest_number = 100
+secret_number = rand.randint(lowest_Number, highest_number)
+attempt = 5
 
-print("Guess the number game, please type a number from 1 to 100, you have 5 attempts")
+print(f"Guess the number , please type a number from {lowest_Number} to {highest_number}, you have {attempt} attempts")
 
 # number of attempts player have
-attempt = 5
+
 
 while attempt:
     try:
         print(f"attempts left: {attempt}")
-        guess = int(input("Please select a number between 1 and 100:\n"))
+        guess = int(input(f"Please select a number between {lowest_Number} and {highest_number}:\n"))
         if secret_number > guess:
             print(f"secret_number is greater then {guess}")
         elif secret_number < guess:
