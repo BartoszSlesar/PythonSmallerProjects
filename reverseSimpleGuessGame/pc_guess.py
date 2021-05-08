@@ -5,9 +5,10 @@ low = 1
 high = 10000
 
 correct_value = True
+guess = 1
 try:
     # player is selecting number program should guess
-    guess = int(input(f"choose number between {low} and {high} inclusive"))
+    guess = int(input(f"choose number between {low} and {high} inclusive\n"))
     if 1 > guess > 10000:
         correct_value = False
 except ValueError:
@@ -23,9 +24,9 @@ while correct_value:
     pc_attempts += 1
     pc_guess = low + (high - low) // 2
     if guess < pc_guess:
-        high = pc_guess
+        high = pc_guess+1
     elif guess > pc_guess:
-        low = pc_guess
+        low = pc_guess-1
     else:
         print(f"I guessed the number it is {pc_guess} attempts needed {pc_attempts}")
         break
