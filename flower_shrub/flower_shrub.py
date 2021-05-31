@@ -29,3 +29,6 @@ for val in data:
         flowers.append(plant)
     else:
         shrubs.append(plant)
+
+
+
