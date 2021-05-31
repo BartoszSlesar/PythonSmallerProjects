@@ -14,7 +14,7 @@ for data in menu:
     removed_spam = ", ".join((item for item in data if item != "spam"))
     print(removed_spam)
 
-#join with list
+#join with list, list should contain all strings
 data = ["dog", "rabbit", "snake", "mouse", "cat"]
 result = ", ".join(data)
 print(result)
